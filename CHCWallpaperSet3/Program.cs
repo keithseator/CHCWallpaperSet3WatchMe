@@ -45,7 +45,8 @@ namespace CHCWallpaperSet3
         // Location to save the wallpaper and Logon screen
         static string saveWallpaperLocation = @"C:\ProgramData\Microsoft\CHC\CHC Wallpaper\CHCWallpaper.bmp";
         static string saveLognScreenLocation = @"C:\Windows\Sysnative\oobe\info\backgrounds\backgroundDefault.jpg";
-        static string watchMeMessage = @"Watch Me: Who's got your back today?";
+        static string watchMeMessage = "Watch Me: Let’s look out for each other.";
+        static int watchMeFontSize = 30;
 
         static int totalWidth = 0;
         static int maxHeight = 0;
@@ -123,7 +124,7 @@ namespace CHCWallpaperSet3
 
                         // Load the font to be used for the info string, with the correct size of text
                         Font futuraFont = new Font(ff, Convert.ToInt32(fontSizeScaled), FontStyle.Regular);
-                        Font futuraFont2 = new Font(ff, Convert.ToInt32(fontSizeScaled + 32), FontStyle.Bold);
+                        Font futuraFont2 = new Font(ff, Convert.ToInt32(fontSizeScaled + watchMeFontSize), FontStyle.Bold);
 
                         // Resize the images
                         Bitmap chcBirdLogo = new Bitmap(Properties.Resources.CHC_Logo);
@@ -175,7 +176,7 @@ namespace CHCWallpaperSet3
 
                             // Load the font to be used for the info string, with the correct size of text
                             Font futuraFont = new Font(ff, Convert.ToInt32(fontSizeScaled), FontStyle.Regular);
-                            Font futuraFont2 = new Font(ff, Convert.ToInt32(fontSizeScaled + 32), FontStyle.Bold);
+                            Font futuraFont2 = new Font(ff, Convert.ToInt32(fontSizeScaled + watchMeFontSize), FontStyle.Bold);
 
                             // Resize the images
                             Bitmap chcBirdLogo = new Bitmap(Properties.Resources.CHC_Logo);
